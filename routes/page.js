@@ -13,6 +13,16 @@ router.get('/', (req, res, next) => {
 	});
 });
 
+router.get('/cplist', (req, res, next) => {
+	fs.readFile('views/inform.html', (err, data) => {
+		if (err) {
+			console.log(err);
+			next(err);
+		}
+		res.end(data);
+	});
+});
+
 router.get('/cpfield', (req, res, next) => {
 	var job = req.param('job');
 	var q1 = "SELECT certificate_NAME FROM job_has_certificate JC, CERTIFICATE C, JOB J WHERE JC.CERTIFICATE_ID = C.CERTIFICATE_id AND JC.JOB_ID = J.JOB_ID AND J.JOB_NAME = '"+job+"'";
