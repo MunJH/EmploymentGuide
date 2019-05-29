@@ -1,0 +1,33 @@
+#btnControl {
+	display: none;
+}
+.btn {
+	border: 1px solid #FFF;
+	cursor: pointer;
+}
+
+/*마우스 눌린 상태일때*/
+
+.btn:active {
+	border: 1px solid red;
+}
+
+/*클릭 후*/
+
+#btnControl:checked + label {
+	font-size: 26px;
+}
+
+#panel, .flip {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    border: solid 1px #a6d8a8;
+    margin: auto;
+  }
+  
+  #panel {
+    display: none;
+  }

@@ -15,8 +15,8 @@
 }
 
 .img-wrapper {
-  width:600px;
-  height:150px;
+  width:210px;
+  height:210px;
   position:absolute;
   cursor:pointer;
 }
@@ -29,22 +29,22 @@
 
 .img1 {
   top:300px;
-  left:50px;
+  left:170px;
 }
 
 .img2 {
-  top:2px;
-  left:202px;
+  top:300px;
+  left:510px;
 }
 
 .img3 {
-  top:202px;
-  left:2px;
-}
+  top:300px;
+  left:820px;
+}                       
 
 .img4 {
-  top:202px;
-  left:202px;
+  top:300px;
+  left:1180px;
 }
 
 .darkness {
@@ -61,21 +61,17 @@
 
 .btn-plus {
   position:absolute;
-  top:45px;
-  left:270px;
-  background:red;
-  width:55px;
-  height:55px;
+  top:80px;
+  left:35px;
   border-radius:50%;
   text-align:center;
-  /* 추가된 부분 */
   opacity:0;
   transform:scale(2);
   transition:all .3s linear;
 }
 
 .btn-plus span {
-  font-size:2.3em;
+  font-size:1.3em;
   color:#ffffff;
   user-select:none;
 }
@@ -89,4 +85,28 @@
 .img-wrapper:hover .btn-plus {
   opacity:1;
   transform:scale(1);
+}
+
+a.tip {
+  position: relative;
+}
+
+a.tip span {
+  
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  width: 125px;
+  padding: 5px;
+  z-index: 100;
+  background: #000;
+  color: #fff;
+  -moz-border-radius: 5px; /* 파폭 박스 둥근 정도 */
+  -webkit-border-radius: 5px; /* 사파리 박스 둥근 정도 */
+}
+
+a:hover.tip span {
+
+  display: block;
 }

@@ -1825,7 +1825,7 @@
 	.dropdown {
 		position: relative;
 		display: inline-block;
-		left: 130px;
+		left: 180px;
 		
 	}
 	
@@ -1868,10 +1868,11 @@
 
 	.box {
 		background: rgba(0, 0, 0, 0.5);
+		position: relative;
 		border-radius: 4px;
 		margin-bottom: 2em;
-		overflow: hidden;
-		padding: 4em;
+		overflow: visible;
+		padding: 10em;
 	}
 
 		.box > :last-child,
@@ -3868,6 +3869,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		height: 100em;
 	}
 
 		#post .inner {

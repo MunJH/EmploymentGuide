@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/hover.css" />
+		<link rel="stylesheet" href="assets/css/onclick.css" />
 	</head>
 	<body class="subpage">
 
@@ -39,37 +40,57 @@
 
 			<section id="post" class="wrapper bg-img" data-bg="banner2.jpg">
 				<div class="inner">
-						<header>
-							<div class = "box">
-								<div class="dropdown">
-								<button class="dropbtn" >Dropdown</button>
-								<div class="dropdown-content">
-								  <a href="#">Link 1</a>
-								  <a href="#">Link 2</a>
-								  <a href="#">Link 3</a>
-								  <a href="#">Link 3</a>
-								  <a href="#">Link 3</a>
-								  <a href="#">Link 3</a>
-								</div>
-								</div>
+					<!-- <article class="box"> -->
+					<header>
+						<div class="dropdown">
+							<button class="dropbtn" >Dropdown</button>
+							<div class="dropdown-content">
+								<a href="#">Link 1</a>
+								<a href="#">Link 2</a>
+								<a href="#">Link 3</a>
+								<a href="#">Link 3</a>
+								<a href="#">Link 3</a>
+								<a href="#">Link 3</a>
 							</div>
-							    <div class="img-wrapper img1">
+						</div>
+								<div class="img-wrapper img1" onclick="myFunction()">
+									<img src="unknown.png" />
+									<div class="darkness"></div>
+									<div class="btn-plus"><span draggable="false">마이다스 아이티</span></div>
+								</div>
+							<div class="img-wrapper img2">
+								<img src="unknown.png" />
+								<div class="darkness"></div>
+								<div class="btn-plus"><span draggable="false">+</span></div>
+							</div>
+							<div class="img-wrapper img3">
 									<img src="unknown.png" />
 									<div class="darkness"></div>
 									<div class="btn-plus"><span draggable="false">+</span></div>
-							   </div>
-							
-						</header>
-							  
-						<!-- <footer>
-							<ul class="actions">
-								<li><a href="#" class="button alt icon fa-chevron-left"><span class="label">Previous</span></a></li>
-								<li><a href="#" class="button alt icon fa-chevron-right"><span class="label">Next</span></a></li>
-							</ul> 
-						</footer>-->
-				</div>
-			</section>
+							</div>
+							<div class="img-wrapper img4">
+									<img src="unknown.png" />
+									<div class="darkness"></div>
+									<div class="btn-plus"><span draggable="false">+</span></div>
+							</div>						
+					</header>
 
+				</div>
+				<div id="panel">
+						<p>This panel contains a div element, which is hidden by default (display: none).</p>
+						<p>It is styled with CSS and we use JavaScript to show it (display: block).</p>
+						<p>How it works: Notice that the p element with class="flip" has an onclick attribute attached to it. When the user clicks on the p element, a function called myFunction() is executed, which changes the style of the div with id="panel" from display:none (hidden) to display:block (visible).</p>
+						<p>You will learn more about JavaScript in our JavaScript Tutorial.</p>
+				</div>
+				<br>
+	
+				<script>
+						function myFunction() {
+						  document.getElementById("panel").style.display = "block";
+						}
+				</script>
+			</section>
+			
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
