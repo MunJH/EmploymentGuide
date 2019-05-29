@@ -1827,7 +1827,7 @@
 	.dropdown {
 		position: relative;
 		display: inline-block;
-		left: 130px;
+		left: 180px;
 		
 	}
 	
@@ -3871,7 +3871,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		height: 50em;
+		height: 100em;
 	}
 
 		#post .inner {
