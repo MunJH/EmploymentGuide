@@ -4,7 +4,7 @@ const fs = require('fs');
 const con = require('../db/db');
 
 router.get('/', (req, res, next) => {
-	fs.readFile('front/index.html', (err, data) => {
+	fs.readFile('views/index.html', (err, data) => {
 		if (err) {
 			console.log(err);
 			next(err);
