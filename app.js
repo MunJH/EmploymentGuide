@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const path = require('path');
+const con = require("./db/db");
 
 const app = express();
 app.set("views", path.join(__dirname, "views"));
