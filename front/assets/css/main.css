@@ -3394,7 +3394,7 @@
 
 		#header.alt {
 			top: 0;
-			background: #F64747;
+			background: white;
 		}
 
 		#header .logo {
@@ -3410,7 +3410,7 @@
 
 			#header .logo a {
 				font-size: 1.25em;
-				color: #fff;
+				color: black;
 				font-weight: 600;
 				text-decoration: none;
 			}
@@ -3443,7 +3443,7 @@
 				height: 2.5em;
 				width: 2.5em;
 				line-height: 2.5em;
-				color: #FFF;
+				color: black;
 				text-align: center;
 			}
 
@@ -3523,9 +3523,9 @@
 		-ms-transition: -ms-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
-		background: #f64242;
+		background: white;
 		box-shadow: none;
-		color: #ffffff;
+		color: black;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -3681,9 +3681,9 @@
 		}
 
 		#banner h1 {
-			font-size: 7em;
+			font-size: 5em;
 			line-height: 1.1;
-			font-family: "Lobster", cursive;
+			font-family: NANUMSQUAREROUNDB.TTF,"Lobster", cursive;
 			margin-bottom: .25em;
 			color: rgba(255, 255, 255, 0.75);
 			text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.125);
