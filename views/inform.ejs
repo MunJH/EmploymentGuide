@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+
+
+<head>
+	<title>Generic - Road Trip by TEMPLATED</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./assets/css/main.css" />
+	<link rel="stylesheet" href="./assets/css/hover.css" />
+	<link rel="stylesheet" href="./assets/css/pop-up.css" />
+
+	<script>
+$('.btn-example').click(function(){
+        var $href = $(this).attr('href');
+		layer_popup($href);
+		console.log('aaa');
+    });
+    function layer_popup(el){
+
+        var $el = $(el);        //레이어의 id를 $el 변수에 저장
+        var isDim = $el.prev().hasClass('dimBg');   //dimmed 레이어를 감지하기 위한 boolean 변수
+
+        isDim ? $('.dim-layer').fadeIn() : $el.fadeIn();
+
+        var $elWidth = ~~($el.outerWidth()),
+            $elHeight = ~~($el.outerHeight()),
+            docWidth = $(document).width(),
+            docHeight = $(document).height();
+
+        // 화면의 중앙에 레이어를 띄운다.
+        if ($elHeight < docHeight || $elWidth < docWidth) {
+            $el.css({
+                marginTop: -$elHeight /2,
+                marginLeft: -$elWidth/2
+            })
+        } else {
+            $el.css({top: 0, left: 0});
+        }
+
+        $el.find('a.btn-layerClose').click(function(){
+            isDim ? $('.dim-layer').fadeOut() : $el.fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
+            return false;
+        });
+
+        $('.layer .dimBg').click(function(){
+            $('.dim-layer').fadeOut();
+            return false;
+        });
+
+    }
+	</script>
+</head>
+
+<body class="subpage">
+
+	<!-- Header -->
+	<header id="header" class="alt">
+		<div class="logo"><a href="/">GSM취업가이드 <span>by TEMPLATED</span></a></div>
+		<a href="#menu"><span>Menu</span></a>
+	</header>
+
+	<!-- Nav -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="inform.html">Generic</a></li>
+			<li><a href="FAQ.html">Elements</a></li>
+			<li><a href="certication.html">certification</a></li>
+		</ul>
+	</nav>
+
+	<!-- Content -->
+	<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+
+	<section id="post" class="wrapper bg-img" data-bg="no3.jpg">
+		<div class="inner">
+			<!-- <article class="box"> -->
+			<header>
+				<div class="dropdown">
+					<button class="dropbtn">직종</button>
+					<div class="dropdown-content">
+					<form action="cplist" method="get" id = "job">
+					</br>
+						<button name = "job" value="게임" type="submit">게임</button>
+						<button name = "job" value="웹 개발" type="submit">웹 개발</button>
+						<button name = "job" value="응용프로그램 개발" type="submit">응용프로그램 개발</button>
+						<button name = "job" value="서버 네트워크 보안" type="submit">서버 네트워크 보안</button>
+					</br>
+					</br>
+						<button name = "job" value="웹마스터 QA 테스터" type="submit">웹마스터 QA 테스터</button>
+						<button name = "job" value="인공지능 및 빅데이터" type="submit">인공지능 및 빅데이터</button>
+					</form>
+					</div>
+				</div>
+				<% if (job == "웹 개발") { %>
+				<div class="img-wrapper img1" onclick="layer_popup(layer1)">
+					<img src="images/Midas.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[0].COMPANY_NAME %></span></div>
+					<div id="layer1" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/Midas.png" >
+									<p class="ctxt mb20">회사명 : <%= company[0].COMPANY_NAME %><br>
+									설립일 : <%= company[0].FOUNDATION %><br>
+									주요사업 : <%= company[0].BUSINESS %><br>
+									매출액 : <%= company[0].SALES %><br>
+									사원수 : <%= company[0].EMP_NUM %><br>
+									연봉 : <%= company[0].ANNUAL_INCOME %><br>
+									장소 : <%= company[0].LOCATION %><br>
+									전화번호 : <%= company[0].TEL %><br>
+									홈페이지 :
+									<a href="http://www.midasit.com/"> <%= company[0].HOMEPAGE %></a>
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="img-wrapper img2" onclick="layer_popup(layer2)">
+					<img src="images/Genie.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[1].COMPANY_NAME %></span></div>
+					<div id="layer2" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/Genie.png" >
+									<p class="ctxt mb20">회사명 : <%= company[1].COMPANY_NAME %><br>
+									설립일 : <%= company[1].FOUNDATION %><br>
+									주요사업 : <%= company[1].BUSINESS %><br>
+									매출액 : <%= company[1].SALES %><br>
+									사원수 : <%= company[1].EMP_NUM %><br>
+									연봉 : <%= company[1].ANNUAL_INCOME %><br>
+									장소 : <%= company[1].LOCATION %><br>
+									전화번호 : <%= company[1].TEL %><br>
+									홈페이지 :
+									<a href="http://geniesoft.io/"> <%= company[0].HOMEPAGE %></a>
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<% } %>
+				<% if (job == "게임") { %>
+				<div class="img-wrapper img1" onclick="layer_popup(layer1)">
+					<img src="images/uniz.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[0].COMPANY_NAME %></span></div>
+					<div id="layer1" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/uniz.png" >
+									<p class="ctxt mb20">회사명 : <%= company[0].COMPANY_NAME %><br>
+									설립일 : <%= company[0].FOUNDATION %><br>
+									주요사업 : <%= company[0].BUSINESS %><br>
+									매출액 : <%= company[0].SALES %><br>
+									사원수 : <%= company[0].EMP_NUM %><br>
+									연봉 : <%= company[0].ANNUAL_INCOME %><br>
+									장소 : <%= company[0].LOCATION %><br>
+									전화번호 : <%= company[0].TEL %><br>
+									홈페이지 :
+									<a href="http://www.unizsoft.com/"> <%= company[0].HOMEPAGE %></a>
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="img-wrapper img2" onclick="layer_popup(layer2)">
+					<img src="images/wisdom.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[1].COMPANY_NAME %></span></div>
+					<div id="layer2" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/wisdom.png" >
+									<p class="ctxt mb20">회사명 : <%= company[1].COMPANY_NAME %><br>
+									설립일 : <%= company[1].FOUNDATION %><br>
+									주요사업 : <%= company[1].BUSINESS %><br>
+									매출액 : <%= company[1].SALES %><br>
+									사원수 : <%= company[1].EMP_NUM %><br>
+									연봉 : <%= company[1].ANNUAL_INCOME %><br>
+									장소 : <%= company[1].LOCATION %><br>
+									전화번호 : <%= company[1].TEL %><br>
+									홈페이지 :
+									<a href="http://vision337.com"> <%= company[0].HOMEPAGE %></a>
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<% } %>
+				<% if (job == "응용프로그램 개발") { %>
+				<div class="img-wrapper img1" onclick="layer_popup(layer1)">
+					<img src="images/jdtek.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[0].COMPANY_NAME %></span></div>
+					<div id="layer1" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/jdtek.png" >
+									<p class="ctxt mb20">회사명 : <%= company[0].COMPANY_NAME %><br>
+									설립일 : <%= company[0].FOUNDATION %><br>
+									주요사업 : <%= company[0].BUSINESS %><br>
+									매출액 : <%= company[0].SALES %><br>
+									사원수 : <%= company[0].EMP_NUM %><br>
+									연봉 : <%= company[0].ANNUAL_INCOME %><br>
+									장소 : <%= company[0].LOCATION %><br>
+									전화번호 : <%= company[0].TEL %><br>
+									홈페이지 :
+									<a href="http://www.jdtek.co.kr/"> <%= company[0].HOMEPAGE %></a>
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="img-wrapper img2" onclick="layer_popup(layer2)">
+					<img src="images/wave.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[1].COMPANY_NAME %></span></div>
+					<div id="layer2" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/wave.png" >
+									<p class="ctxt mb20">회사명 : <%= company[1].COMPANY_NAME %><br>
+									설립일 : <%= company[1].FOUNDATION %><br>
+									주요사업 : <%= company[1].BUSINESS %><br>
+									매출액 : <%= company[1].SALES %><br>
+									사원수 : <%= company[1].EMP_NUM %><br>
+									연봉 : <%= company[1].ANNUAL_INCOME %><br>
+									장소 : <%= company[1].LOCATION %><br>
+									전화번호 : <%= company[1].TEL %><br>
+									홈페이지 :
+									<a href="http://www.wave3d.co.kr/"> <%= company[0].HOMEPAGE %></a>
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<% } %>
+				<% if (job == "서버 네트워크 보안") { %>
+				<div class="img-wrapper img1" onclick="layer_popup(layer1)">
+					<img src="images/monitor.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[0].COMPANY_NAME %></span></div>
+					<div id="layer1" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/monitor.png" >
+									<p class="ctxt mb20">회사명 : <%= company[0].COMPANY_NAME %><br>
+									설립일 : <%= company[0].FOUNDATION %><br>
+									주요사업 : <%= company[0].BUSINESS %><br>
+									매출액 : <%= company[0].SALES %><br>
+									사원수 : <%= company[0].EMP_NUM %><br>
+									연봉 : <%= company[0].ANNUAL_INCOME %><br>
+									장소 : <%= company[0].LOCATION %><br>
+									전화번호 : <%= company[0].TEL %><br>
+									홈페이지 :
+									<a href="www.monitorapp.com"> <%= company[0].HOMEPAGE %></a>
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="img-wrapper img2" onclick="layer_popup(layer2)">
+					<img src="images/unic.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[1].COMPANY_NAME %></span></div>
+					<div id="layer2" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/unic.png" >
+									<p class="ctxt mb20">회사명 : <%= company[1].COMPANY_NAME %><br>
+									설립일 : <%= company[1].FOUNDATION %><br>
+									주요사업 : <%= company[1].BUSINESS %><br>
+									매출액 : <%= company[1].SALES %><br>
+									사원수 : <%= company[1].EMP_NUM %><br>
+									연봉 : <%= company[1].ANNUAL_INCOME %><br>
+									장소 : <%= company[1].LOCATION %><br>
+									전화번호 : <%= company[1].TEL %><br>
+									홈페이지 : -
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<% } %>
+				<% if (job == "웹마스터 QA 테스터") { %>
+				<div class="img-wrapper img1" onclick="layer_popup(layer1)">
+					<img src="images/polet.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[0].COMPANY_NAME %></span></div>
+					<div id="layer1" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/polet.png" >
+									<p class="ctxt mb20">회사명 : <%= company[0].COMPANY_NAME %><br>
+									설립일 : <%= company[0].FOUNDATION %><br>
+									주요사업 : <%= company[0].BUSINESS %><br>
+									매출액 : <%= company[0].SALES %><br>
+									사원수 : <%= company[0].EMP_NUM %><br>
+									연봉 : <%= company[0].ANNUAL_INCOME %><br>
+									장소 : <%= company[0].LOCATION %><br>
+									전화번호 : <%= company[0].TEL %><br>
+									홈페이지 :
+									<a href="https://www.ptw-i.com"> <%= company[0].HOMEPAGE %></a>
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<% } %>
+				<% if (job == "인공지능 및 빅데이터") { %>
+				<div class="img-wrapper img1" onclick="layer_popup(layer1)">
+					<img src="images/zeno.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[0].COMPANY_NAME %></span></div>
+					<div id="layer1" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/zeno.png" >
+									<p class="ctxt mb20">회사명 : <%= company[0].COMPANY_NAME %><br>
+									설립일 : <%= company[0].FOUNDATION %><br>
+									주요사업 : <%= company[0].BUSINESS %><br>
+									매출액 : <%= company[0].SALES %><br>
+									사원수 : <%= company[0].EMP_NUM %><br>
+									연봉 : <%= company[0].ANNUAL_INCOME %><br>
+									장소 : <%= company[0].LOCATION %><br>
+									전화번호 : <%= company[0].TEL %><br>
+									홈페이지 : -
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="img-wrapper img2" onclick="layer_popup(layer2)">
+					<img src="images/nubiz.png" />
+					<div class="darkness"></div>
+					<div class="btn-plus"><span draggable="false"><%= company[1].COMPANY_NAME %></span></div>
+					<div id="layer2" class="pop-layer">
+							<div class="pop-container">
+								<div class="pop-conts">
+									<!--content //-->
+									<img src = "images/nubiz.png" >
+									<p class="ctxt mb20">회사명 : <%= company[1].COMPANY_NAME %><br>
+									설립일 : <%= company[1].FOUNDATION %><br>
+									주요사업 : <%= company[1].BUSINESS %><br>
+									매출액 : <%= company[1].SALES %><br>
+									사원수 : <%= company[1].EMP_NUM %><br>
+									연봉 : <%= company[1].ANNUAL_INCOME %><br>
+									장소 : <%= company[1].LOCATION %><br>
+									전화번호 : <%= company[1].TEL %><br>
+									홈페이지 :
+									<a href="http://www.nubiz.co.kr"> <%= company[0].HOMEPAGE %></a>
+									</p>
+
+									<div class="btn-r">
+										<a href="#" class="btn-layerClose">X</a>
+									</div>
+									<h2>선배와의 연락</h2>
+									<h1>문장훈<h1>
+									<h1> email : zero4125966@gmail.com</h1>
+									<h1> kakaotalk : 4125966ab</h1>
+									<!--// content-->
+								</div>
+							</div>
+						</div>
+				</div>
+				<% } %>
+			</header>
+
+		</div>
+		<br>
+
+		<!-- <a href="#" class="btn-example" onclick="layer_popup(layer1)">일반 팝업레이어</a>
+			<div id="layer1" class="pop-layer">
+    			<div class="pop-container">
+        			<div class="pop-conts">
+
+            			<p class="ctxt mb20">Thank you.<br>
+						Your registration was submitted successfully.<br>
+						Selected invitees will be notified by e-mail on JANUARY 24th.<br><br>
+						Hope to see you soon!
+           				 </p>
+            			<div class="btn-r">
+                			<a href="#" class="btn-layerClose">Close</a>
+            			</div>
+
+        			</div>
+    			</div>
+			</div>-->
+	</section>
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="./assets/js/jquery.min.js"></script>
+	<script src="./assets/js/jquery.scrolly.min.js"></script>
+	<script src="./assets/js/jquery.scrollex.min.js"></script>
+	<script src="./assets/js/skel.min.js"></script>
+	<script src="./assets/js/util.js"></script>
+	<script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

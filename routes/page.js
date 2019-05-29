@@ -14,12 +14,14 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/cplist', (req, res, next) => {
-	fs.readFile('views/inform.html', (err, data) => {
-		if (err) {
-			console.log(err);
-			next(err);
-		}
-		res.end(data);
+	var job = req.param('job');
+	var q = "SELECT COMPANY_NAME, INTRODUCTION, FOUNDATION, BUSINESS, SALES, EMP_NUM, ANNUAL_INCOME, LOCATION, TEL, HOMEPAGE FROM JOB_HAS_COMPANY CJ, COMPANY C, JOB J WHERE CJ.COMPANY_ID = C.COMPANY_ID AND CJ.JOB_ID = J.JOB_ID AND J.JOB_NAME = '"+job+"'";
+
+	con.query(q, function (err, result, fields) {
+			res.render('inform.ejs', {
+				company : result,
+				job : job
+		});
 	});
 });
 
