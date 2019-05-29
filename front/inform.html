@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/hover.css" />
-		<link rel="stylesheet" href="assets/css/onclick.css" />
+		<link rel="stylesheet" href="assets/css/pop-up.css" />
 	</head>
 	<body class="subpage">
 
@@ -43,18 +43,18 @@
 					<!-- <article class="box"> -->
 					<header>
 						<div class="dropdown">
-							<button class="dropbtn" >Dropdown</button>
+							<button class="dropbtn" >직종</button>
 							<div class="dropdown-content">
-								<a href="#">Link 1</a>
-								<a href="#">Link 2</a>
-								<a href="#">Link 3</a>
-								<a href="#">Link 3</a>
-								<a href="#">Link 3</a>
-								<a href="#">Link 3</a>
+								<a href="#">게임</a>
+								<a href="#">웹 개발</a>
+								<a href="#">응용프로그램 개발</a>
+								<a href="#">서버 네트워크 보안</a>
+								<a href="#">웹마스터 QA 테스터</a>
+								<a href="#">인공지능 및 빅데이터</a>
 							</div>
 						</div>
-								<div class="img-wrapper img1" onclick="myFunction()">
-									<img src="unknown.png" />
+								<div class="img-wrapper img1">
+									<img src="images/Midas.png" />
 									<div class="darkness"></div>
 									<div class="btn-plus"><span draggable="false">마이다스 아이티</span></div>
 								</div>
@@ -76,21 +76,29 @@
 					</header>
 
 				</div>
-				<div id="panel">
-						<p>This panel contains a div element, which is hidden by default (display: none).</p>
-						<p>It is styled with CSS and we use JavaScript to show it (display: block).</p>
-						<p>How it works: Notice that the p element with class="flip" has an onclick attribute attached to it. When the user clicks on the p element, a function called myFunction() is executed, which changes the style of the div with id="panel" from display:none (hidden) to display:block (visible).</p>
-						<p>You will learn more about JavaScript in our JavaScript Tutorial.</p>
-				</div>
 				<br>
 	
-				<script>
-						function myFunction() {
-						  document.getElementById("panel").style.display = "block";
-						}
-				</script>
 			</section>
-			
+			<div style="height: 300px;"></div>
+<a href="#layer1" class="btn-example">일반 팝업레이어</a>
+<div id="layer1" class="pop-layer">
+    <div class="pop-container">
+        <div class="pop-conts">
+            <!--content //-->
+            <p class="ctxt mb20">Thank you.<br>
+                Your registration was submitted successfully.<br>
+                Selected invitees will be notified by e-mail on JANUARY 24th.<br><br>
+                Hope to see you soon!
+            </p>
+
+            <div class="btn-r">
+                <a href="#" class="btn-layerClose">Close</a>
+            </div>
+            <!--// content-->
+        </div>
+    </div>
+</div>
+<br/><br/>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
