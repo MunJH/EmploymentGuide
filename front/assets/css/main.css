@@ -17,6 +17,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
+		color: black;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -1793,7 +1794,8 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #fff;
+		color: black;
+		text-align: center;
 	}
 
 	blockquote {
@@ -1867,11 +1869,12 @@
 /* Box */
 
 	.box {
-		background: rgba(0, 0, 0, 0.5);
+		background:	white;
 		border-radius: 4px;
 		margin-bottom: 2em;
 		overflow: hidden;
 		padding: 4em;
+		background-color: rgba( 255, 255, 255, 0.8 );
 	}
 
 		.box > :last-child,
@@ -2827,7 +2830,7 @@
 		}
 
 		table th {
-			font-size: 0.9em;
+			font-size: 1.2em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
@@ -3680,9 +3683,9 @@
 		}
 
 		#banner h1 {
-			font-size: 5em;
+			font-size: 7em;
 			line-height: 1.1;
-			font-family: NANUMSQUAREROUNDB.TTF,"Lobster", cursive;
+			font-family: "Lobster", cursive;
 			margin-bottom: .25em;
 			color: rgba(255, 255, 255, 0.75);
 			text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.125);
@@ -3868,6 +3871,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
+		height: 50em;
 	}
 
 		#post .inner {
