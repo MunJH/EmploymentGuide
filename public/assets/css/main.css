@@ -17,7 +17,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
-		color: black;
+		color:black;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -1795,7 +1795,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: black;
-		text-align: center;
+		text-align:center;
 	}
 
 	blockquote {
@@ -1810,71 +1810,16 @@
 	hr {
 		border-bottom-color: rgba(144, 144, 144, 0.25);
 	}
-/* Dropdown */
-	.dropbtn {
-		background-color: #F64747;
-		color: white;
-		padding: 8px;
-		font-size: 17px;
-		border: none;
-		cursor: pointer;
-		line-height: 30px;
-		width: 500px;
-		
-	}
-	
-	/* The container <div> - needed to position the dropdown content */
-	.dropdown {
-		position: relative;
-		display: inline-block;
-		left: 180px;
-		
-	}
-	
-	/* Dropdown Content (Hidden by Default) */
-	.dropdown-content {
-		display: none;
-		position: absolute;
-		background-color: #f9f9f9;
-		min-width: 160px;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
-		overflow: auto;
-		width: 500px;
-		height: 150px;
-	}
-	
-	/* Links inside the dropdown */
-	.dropdown-content a {
-		color: black;
-		padding: 12px 16px;
-		text-decoration: none;
-		display: block;
-		width: 500px;		
-	}
-	
-	/* Change color of dropdown links on hover */
-	.dropdown-content a:hover {background-color: #f1f1f1}
-	
-	/* Show the dropdown menu on hover */
-	.dropdown:hover .dropdown-content {
-		display: block;
-	}
-	
-	/* Change the background color of the dropdown button when the dropdown content is shown */
-	.dropdown:hover .dropbtn {
-		background-color: #F64747;
-	}
 
 /* Box */
 
 	.box {
-		background:	white;
+		background: white;
 		border-radius: 4px;
 		margin-bottom: 2em;
 		overflow: hidden;
 		padding: 4em;
-		background-color: rgba( 255, 255, 255, 0.8 );
+		background-color:rgba(255,255,255,0.8);
 	}
 
 		.box > :last-child,
@@ -2830,7 +2775,7 @@
 		}
 
 		table th {
-			font-size: 1.2em;
+			font-size: 0.9em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
@@ -3424,7 +3369,7 @@
 			#header .logo span {
 				font-weight: 300;
 				font-size: .8em;
-				color: #FFF;
+				color: black;
 			}
 
 		#header > a {
@@ -3525,9 +3470,9 @@
 		-ms-transition: -ms-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
-		background: white;
+		background: #f64242;
 		box-shadow: none;
-		color: black;
+		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -3683,9 +3628,9 @@
 		}
 
 		#banner h1 {
-			font-size: 7em;
+			font-size: 5em;
 			line-height: 1.1;
-			font-family: "Lobster", cursive;
+			font-family: NANUMSQUAREROUNDB.TTF,"Lobster", cursive;
 			margin-bottom: .25em;
 			color: rgba(255, 255, 255, 0.75);
 			text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.125);
@@ -3871,7 +3816,6 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		height: 100em;
 	}
 
 		#post .inner {

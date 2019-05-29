@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const path = require('path');
 const con = require("./db/db");
 
+const pageRouter = require("./routes/page");
 const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("port", process.env.PORT || 3000);
@@ -11,7 +12,7 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(
     express.urlencoded({
@@ -19,6 +20,7 @@ app.use(
     })
 );
 
+app.use("/", pageRouter);
 app.use((req, res, next) => {
     const err = new Error('Not Found');
     err.status = 404;
