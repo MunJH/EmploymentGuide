@@ -9,7 +9,7 @@
 
 
 <head>
-	<title>Generic - Road Trip by TEMPLATED</title>
+	<title>Company</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,44 +17,48 @@
 	<link rel="stylesheet" href="assets/css/pop-up.css" />
 
 	<script>
-$('.btn-example').click(function(){
-        var $href = $(this).attr('href');
-		layer_popup($href);
-		console.log('aaa');
-    });
-    function layer_popup(el){
+		$('.btn-example').click(function () {
+			var $href = $(this).attr('href');
+			layer_popup($href);
+			console.log('aaa');
+		});
 
-        var $el = $(el);        //레이어의 id를 $el 변수에 저장
-        var isDim = $el.prev().hasClass('dimBg');   //dimmed 레이어를 감지하기 위한 boolean 변수
+		function layer_popup(el) {
 
-        isDim ? $('.dim-layer').fadeIn() : $el.fadeIn();
+			var $el = $(el); //레이어의 id를 $el 변수에 저장
+			var isDim = $el.prev().hasClass('dimBg'); //dimmed 레이어를 감지하기 위한 boolean 변수
 
-        var $elWidth = ~~($el.outerWidth()),
-            $elHeight = ~~($el.outerHeight()),
-            docWidth = $(document).width(),
-            docHeight = $(document).height();
+			isDim ? $('.dim-layer').fadeIn() : $el.fadeIn();
 
-        // 화면의 중앙에 레이어를 띄운다.
-        if ($elHeight < docHeight || $elWidth < docWidth) {
-            $el.css({
-                marginTop: -$elHeight /2,
-                marginLeft: -$elWidth/2
-            })
-        } else {
-            $el.css({top: 0, left: 0});
-        }
+			var $elWidth = ~~($el.outerWidth()),
+				$elHeight = ~~($el.outerHeight()),
+				docWidth = $(document).width(),
+				docHeight = $(document).height();
 
-        $el.find('a.btn-layerClose').click(function(){
-            isDim ? $('.dim-layer').fadeOut() : $el.fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
-            return false;
-        });
+			// 화면의 중앙에 레이어를 띄운다.
+			if ($elHeight < docHeight || $elWidth < docWidth) {
+				$el.css({
+					marginTop: -$elHeight / 2,
+					marginLeft: -$elWidth / 2
+				})
+			} else {
+				$el.css({
+					top: 0,
+					left: 0
+				});
+			}
 
-        $('.layer .dimBg').click(function(){
-            $('.dim-layer').fadeOut();
-            return false;
-        });
+			$el.find('a.btn-layerClose').click(function () {
+				isDim ? $('.dim-layer').fadeOut() : $el.fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
+				return false;
+			});
 
-    }
+			$('.layer .dimBg').click(function () {
+				$('.dim-layer').fadeOut();
+				return false;
+			});
+
+		}
 	</script>
 </head>
 
@@ -69,10 +73,10 @@ $('.btn-example').click(function(){
 	<!-- Nav -->
 	<nav id="menu">
 		<ul class="links">
-			<li><a href="home.html">Home</a></li>
-			<li><a href="inform.html">Generic</a></li>
-			<li><a href="FAQ.html">Elements</a></li>
-			<li><a href="certication.html">certification</a></li>
+			<li><a href="/">Main</a></li>
+			<li><a href="/company">Company Infomation</a></li>
+			<li><a href="/faq">FAQ</a></li>
+			<li><a href="/ability">Certification</a></li>
 		</ul>
 	</nav>
 
@@ -103,11 +107,11 @@ $('.btn-example').click(function(){
 					<div class="darkness"></div>
 					<div class="btn-plus"><span draggable="false">마이다스 아이티</span></div>
 					<div id="layer1" class="pop-layer">
-							<div class="pop-container">
-								<div class="pop-conts">
-									<!--content //-->
-									<img src = "images/Midas.png" vspace = 10 hspace = 30>
-									<p class="ctxt mb20">회사명 : 마이다스아이티<br>									
+						<div class="pop-container">
+							<div class="pop-conts">
+								<!--content //-->
+								<img src="images/Midas.png" vspace=10 hspace=30>
+								<p class="ctxt mb20">회사명 : 마이다스아이티<br>
 									설립일 : 2000<br>
 									주요사업 : 응용 소프트웨어 개발 및 공급업<br>
 									매출액 : 721.5억<br>
@@ -115,21 +119,21 @@ $('.btn-example').click(function(){
 									연봉 : 3700<br>
 									장소 : 경기 성남시 분당구 삼평동 633번지 판교세븐벤쳐밸리2단지 마이다스아이티동<br>
 									전화번호 : 031-789-2000<br>
-									홈페이지 : 
+									홈페이지 :
 									<a href="http://www.midasit.com/">http://www.midasit.com/</a>
-									</p>
-									
-									<div class="btn-r">
-										<a href="#" class="btn-layerClose">X</a>
-									</div>
-									<h2>선배와의 연락</h2>
-									<h1>문장훈 : 4125966ab@naver.com
-										<input type="button" name = "btn" value = "연락하기"></h1>
-									
-									<!--// content-->
+								</p>
+
+								<div class="btn-r">
+									<a href="#" class="btn-layerClose">X</a>
 								</div>
+								<h2>선배와의 연락</h2>
+								<h1>문장훈 : 4125966ab@naver.com
+									<input type="button" name="btn" value="연락하기"></h1>
+
+								<!--// content-->
 							</div>
 						</div>
+					</div>
 				</div>
 				<div class="img-wrapper img2">
 					<img src="images/poletowin.png" />
@@ -150,7 +154,7 @@ $('.btn-example').click(function(){
 
 		</div>
 		<br>
-		
+
 		<!-- <a href="#" class="btn-example" onclick="layer_popup(layer1)">일반 팝업레이어</a>
 			<div id="layer1" class="pop-layer">
     			<div class="pop-container">
