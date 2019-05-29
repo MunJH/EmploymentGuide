@@ -3363,7 +3363,7 @@
 			}
 
 				#header .logo a:hover {
-					color: #fff;
+					color: rgb(255, 17, 17);
 				}
 
 			#header .logo span {
@@ -3405,7 +3405,7 @@
 				}
 
 				#header > a[href="#menu"]:hover {
-					color: rgba(255, 255, 255, 0.25);
+					color: rgba(0, 60, 255, 0.25);
 					background: none;
 					box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
 				}
@@ -3500,7 +3500,7 @@
 
 					#menu > ul.links > li > a:not(.button) {
 						border: 0;
-						border-top: solid 1px rgba(255, 255, 255, 0.25);
+						border-top: solid 1px rgba(3, 142, 255, 0.25);
 						color: inherit;
 						display: block;
 						line-height: 3.5em;
@@ -3553,7 +3553,7 @@
 			}
 
 			#menu .close:hover {
-				color: #ffffff;
+				color: #ff0000;
 			}
 
 			@media screen and (max-width: 736px) {
@@ -3816,7 +3816,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		
+		height:100vh;
 	}
 
 		#post .inner {
